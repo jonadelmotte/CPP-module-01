@@ -7,10 +7,10 @@ Zombie::Zombie(std::string n)
 
 Zombie::~Zombie()
 {
-    std::cout << _name << ": died....again..." << std::endl;
+    std::cout << BLUE << _name << ": " GREEN "died....again..." RESET << std::endl;
 }
 
 void    Zombie::announce()
 {
-    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << BLUE << _name <<  ": " << RED "BraiiiiiiinnnzzzZ..." RESET << std::endl;
 }

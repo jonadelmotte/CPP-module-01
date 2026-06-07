@@ -7,6 +7,6 @@ int main()
     newZ = newZombie("Zola");
     randomChump("Sarraute");
     delete newZ;
-    mewZ = nullptr;
+    newZ = nullptr;
     return 0;
 }
