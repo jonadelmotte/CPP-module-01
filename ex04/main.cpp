@@ -2,6 +2,11 @@
 #include <string>
 #include <fstream>
 
+# define RESET "\e[0m"
+# define RED "\e[31m"
+# define GREEN "\e[32m"
+# define BLUE "\e[1;36m"
+
 //replace (string.erase(index of erase, size of erase))  (string.insert(pos of insert, string to insert))
 
 std::string search_and_replace(std::string buffer, std::string search, std::string replace)
@@ -28,6 +33,11 @@ std::string search_and_replace(std::string buffer, std::string search, std::stri
 
 int main(int argc, char *argv[])
 {
+    if (argc != 4)
+    {
+        std::cout << RED "The programe must be used like this : " BLUE "./tete filename s1 s2" RESET << std::endl;
+        return 1;
+    }
     std::string file = argv[1];
     std::string search = argv[2];
     std::string replace = argv[3];
