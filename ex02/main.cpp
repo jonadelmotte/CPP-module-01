@@ -17,15 +17,17 @@ int main()
 
     std::cout << RED "|" << std::setfill('-') << std::setw(57) << "-|" << RESET << std::endl;
 
-    std::cout << RED "|" BLUE "the address of the string is : " << GREEN << &hi << RED "              |" RESET << std::endl;
-    std::cout << RED "|" BLUE "the address held by the pointer is : " << GREEN << &pointer << RED "        |" RESET << std::endl;
-    std::cout << RED "|" BLUE "the address held by the reference is : " << GREEN << &ref << RED "      |" RESET << std::endl;
+    std::cout << std::setfill(' ');
+    std::cout << RED "|" BLUE "the address of the string is :" GREEN << &hi << RESET << std::setw(22) << RED "|" RESET << std::endl;
+    std::cout << RED "|" BLUE "the address held by the pointer is :" GREEN << &pointer << RESET << std::setw(16) << RED "|" RESET << std::endl;
+    std::cout << RED "|" BLUE "the address held by the reference is :" GREEN << &ref << RESET << std::setw(14) << RED "|" RESET << std::endl;
     
     std::cout << RED "|" << std::setfill('-') << std::setw(57) << "-|" << RESET << std::endl;
 
-    std::cout << RED "|" BLUE "the value of the string is : " GREEN << hi << RED "           |" RESET << std::endl;
-    std::cout << RED "|" BLUE "the value pointed by the pointer is : " GREEN << pointer << RED "       |" RESET << std::endl;
-    std::cout << RED "|" BLUE "the value pointed by the reference is : " GREEN << ref << RED "|" RESET << std::endl;
+    std::cout << std::setfill(' ');
+    std::cout << RED "|" BLUE "the value of the string is :" GREEN << hi << RESET << std::setw(22) << RED "|" RESET << std::endl;
+    std::cout << RED "|" BLUE "the value pointed by the pointer is :" GREEN << pointer << RESET << std::setw(15) << RED "|" RESET << std::endl;
+    std::cout << RED "|" BLUE "the value pointed by the reference is : " GREEN << ref << RESET RED "|" RESET << std::endl;
 
     std::cout << RED "|" RED << std::setfill('-') << std::setw(57) << "-|" << RESET << std::endl;
     return 0;
