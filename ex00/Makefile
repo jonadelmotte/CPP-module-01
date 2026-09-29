@@ -7,7 +7,7 @@ OBJ_DIR = obj/
 
 CCMAC = clang++
 CC = c++
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -std=c++98
 
 INCLUDE = include/
 

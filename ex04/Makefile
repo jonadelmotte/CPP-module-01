@@ -1,18 +1,17 @@
-NAME = HI
+NAME = replace
 
 FILES = main \
-
-SRC_DIR = src/
 
 CCMAC = clang++
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
-OBJ = $(SRC:.cpp=.o)
-
 INCLUDE = include/
 
 SRC = $(addsuffix .cpp, $(FILES))
+OBJ = $(addsuffix .o, $(FILES))
+
+OBJF = .cache_exits
 
 GREEN = \033[0;92m
 YELLOW = \033[33m
@@ -22,11 +21,11 @@ RESET = \033[0;39m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CCMAC) $(FLAGS) $(OBJ) -g3 -o $(NAME)
-	@echo -e "$(GREEN)HI compiled !!$(RESET)"
+	@$(CC) $(FLAGS) $(OBJ) -g3 -o $(NAME)
+	@echo -e "$(GREEN)replace compiled !!$(RESET)"
 
-$(OBJ)%.o: %.cpp $(INCLUDE) Makefile
-	@$(CCMAC) $(FLAGS) -c -g3 $< -o $@
+%.o: %.cpp
+	@$(CC) $(FLAGS) -c -g3 $< -o $@
 
 clean:
 	@rm -rf $(OBJ)
