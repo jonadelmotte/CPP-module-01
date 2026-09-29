@@ -11,6 +11,8 @@ INCLUDE = include/
 SRC = $(addsuffix .cpp, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))
 
+FILE_REPLACE = file.replace
+
 OBJF = .cache_exits
 
 GREEN = \033[0;92m
@@ -33,6 +35,7 @@ clean:
 	@echo -e "$(YELLOW)Obj destroyed !!$(RESET)"
 
 fclean: clean
+	@rm -f $(FILE_REPLACE)
 	@rm -f $(NAME)
 	@echo -e "$(YELLOW)Executable destroyed !!$(RESET)"
 

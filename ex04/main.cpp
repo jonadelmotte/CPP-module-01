@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     std::string file = argv[1];
-    std::string file_replace = file + ".replace";
+    std::string file_replace = "./ex04/" + file + ".replace";
     std::string search = argv[2];
     std::string replace = argv[3];
     std::string buf;
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 
     infile.open(file.c_str());
     outfile.open(file_replace.c_str());
-    if (infile.is_open()  == true)
+    if (infile.is_open() == true)
     {
         while (std::getline(infile, buf))
         {
