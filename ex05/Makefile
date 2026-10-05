@@ -1,6 +1,6 @@
 NAME = Harl
 
-FILES = main harl \
+FILES = main Harl \
 
 SRC_DIR = src/
 OBJ_DIR = obj/
