@@ -6,7 +6,7 @@
 /*   By: jdelmott <jdelmott@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 11:02:47 by jdelmott          #+#    #+#             */
-/*   Updated: 2026/10/05 14:32:23 by jdelmott         ###   ########.fr       */
+/*   Updated: 2026/10/05 16:41:57 by jdelmott         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,22 @@ void    Harl::error(void)
     std::cout << BLUE "The antichrist has descended upon earth\nHarl had warned us about it..." RESET << std::endl;
 }
 
-void    Harl::complain(void)
+void    Harl::complain(std::string level)
 {
-    debug();
-    info();
-    warning();
-    error();
-    /*do something jona pleaaaase*/
+    if (level.empty() == true)
+        return ;
+    void    (Harl::*ptr[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    std::string levels[] = {"debug", "info", "warning", "error"};
+    bool done = false;
+
+    for (int i = 0; i < 4; i++)
+    {
+        if (levels[i] == level)
+        {
+            done = true;
+            (this->*ptr[i])();
+        }
+    }
+    if (done == false)
+        std::cout << "No complain to be done" << std::endl;
 }

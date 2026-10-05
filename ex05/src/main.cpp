@@ -6,7 +6,7 @@
 /*   By: jdelmott <jdelmott@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 11:03:23 by jdelmott          #+#    #+#             */
-/*   Updated: 2026/10/05 14:29:57 by jdelmott         ###   ########.fr       */
+/*   Updated: 2026/10/05 16:41:07 by jdelmott         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int main()
 {
     Harl Harl;
 
-    Harl.complain();
+    Harl.complain(NULL);
 }
