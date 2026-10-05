@@ -6,7 +6,7 @@
 /*   By: jdelmott <jdelmott@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 11:02:47 by jdelmott          #+#    #+#             */
-/*   Updated: 2026/10/05 10:47:47 by jdelmott         ###   ########.fr       */
+/*   Updated: 2026/10/05 10:48:45 by jdelmott         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void    Harl::debug(void)
 
 void    Harl::info(void)
 {
-    std::cout << "Harl : 'i can feel it..\nThe antichrist is trying to manifest\n'" std::endl;
+    std::cout << "Harl : 'i can feel it..\nThe antichrist is trying to manifest\n'" << std::endl;
 }
 
 void    Harl::warning(void)
