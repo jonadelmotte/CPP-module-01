@@ -14,10 +14,10 @@
 
 int main(int ac, char **av)
 {
-    Harl Harl;
+    Harl Harl1;
 
     if (ac == 2)
-        Harl.complain_from((std::string)av[1]);
+        Harl1.complain((std::string)av[1]);
     else
         std::cout << "not the right format" << std::endl;
 }

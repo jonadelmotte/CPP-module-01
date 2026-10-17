@@ -50,33 +50,29 @@ void    Harl::complain(std::string level)
 {
     void    (Harl::*ptr[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
     std::string levels[] = {"debug", "info", "warning", "error"};
+    int i = 0;
 
-    for (int i = 0; i < 4; i++)
+    for (; i < 4; i++)
     {
         if (levels[i] == level)
-        {
-            (this->*ptr[i])();
-            return ;
-        }
+            break ;
     }
-    std::cout << "No complain to be done" << std::endl;
+    switch (i)
+    {
+        case 0:
+            (this->*ptr[0])();
+        case 1:
+            (this->*ptr[1])();
+        case 2:
+            (this->*ptr[2])();
+        case 3:
+            (this->*ptr[3])();
+            break;
+        
+        default:
+            std::cout << "No complain to be done" << std::endl;
+            break;
+    }
 }
 
-void    Harl::complain_from(std::string level)
-{
-    switch ((const char *)level.c_str())
-    {
-        case "DEBUG"
-            this->debug();
-            level.assign("INFO");
-        case "INFO"
-            this->info();
-            level.assign("WARNING");
-        case "WARNING"
-            this->warning();
-            level.assign("ERROR");
-        case "ERROR"
-            this->error();
-            break ; 
-    }
-}
+
