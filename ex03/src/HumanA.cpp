@@ -2,7 +2,10 @@
 
 HumanA::HumanA(std::string name, Weapon &Weapon):_Weapon(Weapon)
 {
-    _name = name;
+    if (!name.empty())
+        _name = name;
+    else
+        _name = "Nobody";
 }
 
 HumanA::~HumanA()

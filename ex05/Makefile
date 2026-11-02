@@ -5,8 +5,8 @@ FILES = main Harl \
 SRC_DIR = src/
 OBJ_DIR = obj/
 
-CCMAC = clang++
-CC = c++
+CXXMAC = clang++
+CXX = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
 INCLUDE = include/
@@ -30,11 +30,11 @@ vpath %.cpp $(SRC_DIR)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CCMAC) $(FLAGS) $(OBJ) -g3 -o $(NAME)
+	@$(CXXMAC) $(FLAGS) $(OBJ) -g3 -o $(NAME)
 	@echo -e "$(GREEN)Harl compiled !!$(RESET)"
 
 $(OBJ_DIR)%.o: %.cpp $(INCLUDE) Makefile | $(OBJF)
-	@$(CCMAC) $(FLAGS) -c -g3 $< -o $@
+	@$(CXXMAC) $(FLAGS) -c -g3 $< -o $@
 
 clean:
 	@rm -rf $(OBJ)

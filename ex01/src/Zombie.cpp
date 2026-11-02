@@ -16,5 +16,8 @@ void    Zombie::announce()
 
 void    Zombie::nameZombie(std::string name)
 {
-    _name = name;
+    if (!name.empty())
+        _name = name;
+    else
+        _name = "Nobody";
 }

@@ -4,10 +4,10 @@
 int main()
 {
     {
-        Weapon club = Weapon("crude spiked club");
-        HumanA bob("Bob", club);
+        Weapon club = Weapon("");
+        HumanA bob("", club);
         bob.attack();
-        club.setType("some other type of club");
+        club.setType("");
         bob.attack();
     }
     {

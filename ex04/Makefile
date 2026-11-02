@@ -2,8 +2,8 @@ NAME = replace
 
 FILES = main \
 
-CCMAC = clang++
-CC = c++
+CXXMAC = clang++
+CXX = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
 INCLUDE = include/
@@ -23,11 +23,11 @@ RESET = \033[0;39m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(FLAGS) $(OBJ) -g3 -o $(NAME)
+	@$(CXX) $(FLAGS) $(OBJ) -g3 -o $(NAME)
 	@echo -e "$(GREEN)replace compiled !!$(RESET)"
 
 %.o: %.cpp
-	@$(CC) $(FLAGS) -c -g3 $< -o $@
+	@$(CXX) $(FLAGS) -c -g3 $< -o $@
 
 clean:
 	@rm -rf $(OBJ)

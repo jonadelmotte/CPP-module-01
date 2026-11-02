@@ -6,7 +6,7 @@
 /*   By: jdelmott <jdelmott@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 11:02:47 by jdelmott          #+#    #+#             */
-/*   Updated: 2026/10/06 14:05:05 by jdelmott         ###   ########.fr       */
+/*   Updated: 2026/11/02 11:41:09 by jdelmott         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,42 @@
 
 Harl::Harl(void)
 {
-    std::cout << BLUE "On the seventh day, Harl was created" RESET << std::endl;
+    std::cout << BLUE "On the seventh day, Harl was created\n" RESET << std::endl;
 }
 
 Harl::~Harl(void)
 {
-    std::cout << BLUE "Harl has died, long live Harl" RESET << std::endl;
+    std::cout << BLUE "Harl has died, long live Harl\n" RESET << std::endl;
 }
 
 void    Harl::debug(void)
 {
-    std::cout << "\n[ DEBUG ]\n";
-    std::cout << BLUE "Harl seems to have an issue\nIs it the comming of the antichrist ?" RESET << std::endl;
+    std::cout << PURPLE "[ DEBUG ]" RESET "\n";
+    std::cout << BLUE "Harl seems to have an issue\nIs it the comming of the antichrist ?\n" RESET << std::endl;
 }
 
 void    Harl::info(void)
 {
-    std::cout << "\n[ INFO ]\n";
-    std::cout << BLUE "Harl : " RED "\n'i can feel it..\nThe antichrist is trying to manifest'" RESET << std::endl;
+    std::cout << PURPLE "[ INFO ]" RESET "\n";
+    std::cout << BLUE "Harl : " RED "\n'i can feel it..\nThe antichrist is trying to manifest'\n" RESET << std::endl;
 }
 
 void    Harl::warning(void)
 {
-    std::cout << "\n[ WARNING ]\n";
-    std::cout << BLUE "Harl : " RED "\n'we should get rid of our sins !!!\nEveryone CONFESS !!!'" RESET << std::endl;
+    std::cout << PURPLE "[ WARNING ]" RESET "\n";
+    std::cout << BLUE "Harl : " RED "\n'we should get rid of our sins !!!\nEveryone CONFESS !!!'\n" RESET << std::endl;
 }
 
 void    Harl::error(void)
 {
-    std::cout << "\n[ ERROR ]\n";
-    std::cout << BLUE "The antichrist has descended upon earth\nHarl had warned us about it..." RESET << std::endl;
+    std::cout << PURPLE "[ ERROR ]" RESET "\n";
+    std::cout << BLUE "The antichrist has descended upon earth\nHarl had warned us about it...\n" RESET << std::endl;
 }
 
 void    Harl::complain(std::string level)
 {
     void    (Harl::*ptr[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-    std::string levels[] = {"debug", "info", "warning", "error"};
+    std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     int i = 0;
 
     for (; i < 4; i++)

@@ -3,7 +3,9 @@
 HumanB::HumanB(std::string name)
 {
     _Weapon = NULL;
-    _name = name;
+    if (!_name.empty())
+        _name = name;
+    _name = "Nobody";
 }
 
 HumanB::~HumanB()

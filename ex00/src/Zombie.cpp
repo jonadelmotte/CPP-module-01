@@ -2,7 +2,10 @@
 
 Zombie::Zombie(std::string n)
 {
-    _name = n;
+    if (!n.empty())
+        _name = n;
+    else
+        _name = "Nobody";
 }
 
 Zombie::~Zombie()

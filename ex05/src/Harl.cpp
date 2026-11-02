@@ -6,7 +6,7 @@
 /*   By: jdelmott <jdelmott@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 11:02:47 by jdelmott          #+#    #+#             */
-/*   Updated: 2026/10/06 14:05:05 by jdelmott         ###   ########.fr       */
+/*   Updated: 2026/11/02 11:36:18 by jdelmott         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,25 @@ Harl::~Harl(void)
 
 void    Harl::debug(void)
 {
+    std::cout << PURPLE "[ DEBUG ]" RESET << std::endl;
     std::cout << BLUE "Harl seems to have an issue\nIs it the comming of the antichrist ?" RESET << std::endl;
 }
 
 void    Harl::info(void)
 {
+    std::cout << PURPLE "[ INFO ]" RESET << std::endl;
     std::cout << BLUE "Harl : " RED "\n'i can feel it..\nThe antichrist is trying to manifest'" RESET << std::endl;
 }
 
 void    Harl::warning(void)
 {
+    std::cout << PURPLE "[ WARNGING ]" RESET << std::endl;
     std::cout << BLUE "Harl : " RED "\n'we should get rid of our sins !!!\nEveryone CONFESS !!!'" RESET << std::endl;
 }
 
 void    Harl::error(void)
 {
+    std::cout << PURPLE "[ ERROR ]" RESET << std::endl;
     std::cout << BLUE "The antichrist has descended upon earth\nHarl had warned us about it..." RESET << std::endl;
 }
 

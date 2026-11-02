@@ -17,6 +17,9 @@ std::string Weapon::getType() const
 
 void Weapon::setType(const std::string &type)
 {
-    _type = type;
+    if (!type.empty())
+        _type = type;
+    else
+        _type = "Nothing";
 }
 

@@ -4,8 +4,8 @@ FILES = main \
 
 SRC_DIR = src/
 
-CCMAC = clang++
-CC = c++
+CXXMAC = clang++
+CXX = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
 OBJ = $(SRC:.cpp=.o)
@@ -22,11 +22,11 @@ RESET = \033[0;39m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CCMAC) $(FLAGS) $(OBJ) -g3 -o $(NAME)
+	@$(CXXMAC) $(FLAGS) $(OBJ) -g3 -o $(NAME)
 	@echo -e "$(GREEN)HI compiled !!$(RESET)"
 
 $(OBJ)%.o: %.cpp $(INCLUDE) Makefile
-	@$(CCMAC) $(FLAGS) -c -g3 $< -o $@
+	@$(CXXMAC) $(FLAGS) -c -g3 $< -o $@
 
 clean:
 	@rm -rf $(OBJ)

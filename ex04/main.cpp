@@ -7,8 +7,6 @@
 # define GREEN "\e[32m"
 # define BLUE "\e[1;36m"
 
-//replace (string.erase(index of erase, size of erase))  (string.insert(pos of insert, string to insert))
-
 std::string search_and_replace(std::string buffer, std::string search, std::string replace)
 {
     size_t index = 0;
@@ -50,6 +48,7 @@ int main(int argc, char *argv[])
         while (std::getline(infile, buf))
         {
             buf = search_and_replace(buf, search, replace);
+            outfile << buf;
             if (infile.peek() != EOF)
                 outfile << std::endl;
         }
