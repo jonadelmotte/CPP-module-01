@@ -10,7 +10,7 @@ Weapon::~Weapon()
     std::cout << RED << _type << ": " BLUE "IS NO MORE" RESET << std::endl;
 }
 
-std::string Weapon::getType() const
+const std::string &Weapon::getType() const
 {
     return (_type);
 }
