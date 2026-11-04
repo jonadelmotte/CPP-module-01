@@ -20,8 +20,8 @@ private:
 public:
     Zombie();
     ~Zombie();
-    void nameZombie(std::string name);
-    void announce();
+    void nameZombie(std::string &name);
+    void announce() const;
 } ;
 
 Zombie* zombieHorde( int N, std::string name );

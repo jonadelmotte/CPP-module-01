@@ -1,11 +1,11 @@
 #include "../include/Zombie.hpp"
 
-Zombie::Zombie(std::string n)
+Zombie::Zombie() : _name("Nobody")
 {
-    if (!n.empty())
-        _name = n;
-    else
-        _name = "Nobody";
+}
+
+Zombie::Zombie(std::string &n) : _name(n)
+{
 }
 
 Zombie::~Zombie()
@@ -13,7 +13,7 @@ Zombie::~Zombie()
     std::cout << BLUE << _name << ": " GREEN "died....again..." RESET << std::endl;
 }
 
-void    Zombie::announce()
+void    Zombie::announce() const
 {
     std::cout << BLUE << _name <<  ": " << RED "BraiiiiiiinnnzzzZ..." RESET << std::endl;
 }
