@@ -6,11 +6,12 @@
 /*   By: jdelmott <jdelmott@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 11:02:47 by jdelmott          #+#    #+#             */
-/*   Updated: 2026/11/02 11:36:18 by jdelmott         ###   ########.fr       */
+/*   Updated: 2026/11/12 17:42:24 by jdelmott         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Harl.hpp"
+#include <iostream>
 
 Harl::Harl(void)
 {

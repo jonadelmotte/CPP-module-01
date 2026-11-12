@@ -1,4 +1,5 @@
 #include "../include/Weapon.hpp"
+#include <iostream>
 
 Weapon::Weapon(const std::string &type)
 {
